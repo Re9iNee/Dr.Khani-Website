@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Init */
+        body {
+            margin: 0 auto;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            width: 100vw;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+
+        /* Display */
+        .container {
+            display: grid;
+            grid-template-columns: 3.7% repeat(10, 1fr) 3.7%;
+            grid-template-rows: 80px 1fr 71px;
+            height: 100%;
+            column-gap: 3.7%;
+            grid-template-areas:
+                ". header header header header header header header header logo logo ."
+                ". content content content content content content content content content content ."
+                "footer footer footer footer footer footer footer footer footer footer footer footer";
+            direction: rtl;
+        }
+
+        /* header {
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } */
+        .links {
+            grid-area: header;
+            align-self: center;
+        }
+
+        .logo {
+            grid-area: logo;
+            align-self: center;
+            transition: .2s all linear;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        /* Animation */
+        .logo:hover {
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        /* debugging */
+        div,
+        footer,
+        header {
+            border: 1px solid red
+        }
+        .content {
+            background-color: rgba(255, 127, 80, 0.548);
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="links">
+            <a href="#">درباره ما</a>
+            <a href="#">دستاورد ها</a>
+            <a href="#">تماس با ما</a>
+        </div>
+        <img class="logo" src="/src/logo.svg" alt="main-logo"></img>
+        <div class="content"></div>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
