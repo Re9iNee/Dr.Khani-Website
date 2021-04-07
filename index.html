@@ -27,32 +27,47 @@
             grid-template-rows: 80px 1fr 71px;
             height: 100%;
             column-gap: 3.7%;
+            row-gap: 12px;
             grid-template-areas:
                 ". header header header header . . . . logo logo ."
                 ". content content content content content content content content content content ."
                 "footer footer footer footer footer footer footer footer footer footer footer footer";
             direction: rtl;
+            /* todo: logo doesn't have any top padding and have display problems */
+            /* padding-top: 12px; */
         }
 
-        /* header {
-            grid-area: header;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        } */
         .links {
             grid-area: header;
             align-self: center;
+            padding: 12px; 
         }
 
         .logo {
             grid-area: logo;
             align-self: center;
             transition: .2s all linear;
+
         }
 
         .content {
             grid-area: content;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Idea: on mobile views .content flex-direction would be columns */
+        .photo {
+            min-width: 40%;
+        }
+        .photo img {
+            width: 100%;
+        }
+        .content > * {
+            padding: 12px;
         }
 
         footer {
@@ -86,7 +101,15 @@
             <a href="#">تماس با ما</a>
         </div>
         <img class="logo" src="/src/logo.svg" alt="main-logo"></img>
-        <div class="content"></div>
+        <div class="content">
+            <div class="photo">
+                <img src="/src/photo.png" alt="" srcset="">
+            </div>
+            <div class="texts">
+                <h1>دکتر مسعود خانی</h1>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+            </div>
+        </div>
         <footer></footer>
     </div>
 </body>
