@@ -47,7 +47,7 @@
             grid-area: logo;
             align-self: center;
             transition: .2s all linear;
-
+            
         }
 
         .content {
@@ -74,6 +74,26 @@
             grid-area: footer;
         }
 
+
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row: 1fr;
+            align-items: end;
+            text-align: center;
+        }
+        footer .text {
+            grid-area: text;
+            grid-column: 2 / 3;
+            grid-row: 1;
+            z-index: 1;
+            align-self: center;
+        }
+        footer .background {
+            grid-column:1 / 4;
+            grid-row: 1;
+        }
+
         /* Animation */
         .logo:hover {
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -87,6 +107,9 @@
         }
         .content {
             background-color: rgba(255, 127, 80, 0.548);
+        }
+        body {
+            background-color: lightblue;
         }
 
     </style>
@@ -110,7 +133,12 @@
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
             </div>
         </div>
-        <footer></footer>
+        <footer>
+            <div class="text">ادامه معرفی نامه</div>
+            <div class="background">
+                <img width="100%" src="/src/Ellipse 11.png" alt="" srcset="">
+            </div>
+        </footer>
     </div>
 </body>
 
