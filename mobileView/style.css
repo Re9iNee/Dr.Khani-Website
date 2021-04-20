@@ -1,0 +1,81 @@
+/* init */
+body {
+    margin: 0 auto;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/* Debugging */
+/* body {
+    border: 1px solid green;
+}
+
+section {
+    border: 1px solid red;
+}
+
+.intro-page-1 {
+    border: 1px solid purple;
+} */
+
+/* Display */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-page-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+.intro-page-1 > * {
+    padding: 4px 12px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    text-align: center;
+}
+
+
+/* font styles */
+.header{
+    text-align: center;
+}
+body {
+    direction: rtl;
+}
+@font-face {
+    font-family: "LMUVazir";
+    src: url("./src/fonts/LMU\ Vazir.ttf");
+}
+@font-face {
+    font-family: "Far_Casablanca Heavy";
+    src: url("./src/fonts/Far_Casablanca\ Heavy.ttf");
+}
+.paragraph {
+    font-family: "LMUVazir";
+    color: rgb(54, 54, 54);
+    font-size: 0.8rem;
+}
+.header {
+    font-family: "Far_Casablanca Heavy";
+    font-size: 1.5rem;
+}
