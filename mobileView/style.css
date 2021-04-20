@@ -64,6 +64,19 @@ body {
     border-radius: 5px;
 }
 
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+a.vote {
+    background-color: #0055A5;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+
 /* font styles */
 .header{
     text-align: center;
@@ -79,6 +92,10 @@ body {
     font-family: "Far_Casablanca Heavy";
     src: url("./src/fonts/Far_Casablanca\ Heavy.ttf");
 }
+@font-face {
+    font-family: "Lalezar-Regular";
+    src: url("./src/fonts/Lalezar-Regular.ttf");
+}
 .paragraph {
     font-family: "LMUVazir";
     color: rgb(54, 54, 54);
@@ -87,4 +104,10 @@ body {
 .header {
     font-family: "Far_Casablanca Heavy";
     font-size: 1.5rem;
+}
+a {
+    font-family: "Lalezar-Regular";
+    text-decoration: none;
+    color: #696969;
+    padding: 12px;
 }
