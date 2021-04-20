@@ -40,6 +40,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 12px;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 .intro-page > * {
     padding: 4px 12px;
